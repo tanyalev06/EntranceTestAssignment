@@ -59,7 +59,7 @@ public class Main {
             scanner.nextLine();
 
             if (action == 3) {
-                System.out.println("Введите путь к файлу, пожалуйста (Enter the file path, please) : ");
+                System.out.println("Enter the file path, please: ");
                 String fileway = scanner.nextLine();
                 File file = new File(fileway);
                 Scanner filescanner = new Scanner(file);
@@ -69,25 +69,25 @@ public class Main {
                 filescanner.close();
                 message = fileContent.toString();
 
-                System.out.println("Введите значение свига, пожалуйста (Enter a shift value (integer), please): ");
+                System.out.println("Enter a shift value (integer), please: ");
                 shift = scanner.nextInt();
                 scanner.nextLine();
 
-                System.out.println("Расшифрованное сообщение (Decrypted message): ");
+                System.out.println("Decrypted message: ");
                 System.out.println(CaesarCipherImplementation.caesarCipher(message, shift));
 
             } else if (action == 4) {
-                System.out.println("Введите сообщение, пожалуйста (Enter your message, please): ");
+                System.out.println("Enter your message, please: ");
                 message = scanner.nextLine();
 
-                System.out.println("Варианты расшифровки в зависимости от сдвига (Options of decryption depend on shift): ");
+                System.out.println("Options of decryption depend on shift: ");
                 for (int i = -32; i <= 32; i++) {
-                    System.out.println("Сдвиг (Shift) " + i + ":");
+                    System.out.println("Shift " + i + ":");
                     System.out.println(CaesarCipherImplementation.caesarCipher(message, i));
                     System.out.println();
                 }
             } else {
-                System.out.println("Сделайте, пожалуйста, верный выбор (Choose the right option, please)");
+                System.out.println("Choose the right option, please");
                 scanner.close();
                 return;
             }
@@ -95,19 +95,19 @@ public class Main {
         } else if (menuoption == 3) {
             ArithmeticExpressionEvaluator evaluator = new ArithmeticExpressionEvaluator();
 
-            System.out.print("Введите выражение: ");
+            System.out.print("Enter your expression, please: ");
             String input = scanner.nextLine();
 
             try {
                 double result = evaluator.evaluate(input);
-                System.out.println("Результат: " + result);
+                System.out.println("Result: " + result);
             } catch (ArithmeticException e) {
-                System.out.println("Ошибка: " + e.getMessage());
+                System.out.println("Error: " + e.getMessage());
             } catch (Exception e) {
-                System.out.println("Ошибка: неверное выражение");
+                System.out.println("Error: wrong expression");
             }
         } else {
-            System.out.println("Сделайте, пожалуйста, верный выбор (Choose the right option, please)");
+            System.out.println("Choose the right option, please");
         }
 
         scanner.close();
