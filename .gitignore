@@ -1,31 +1,15 @@
 <<<<<<< HEAD
 ### IntelliJ IDEA ###
+.idea/
+*.iml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
 ### VS Code ###
 .vscode/
 
+<<<<<<< HEAD
 ### Mac OS ###
 .DS_Store
 =======
@@ -54,3 +38,18 @@ bin/
 hs_err_pid*
 replay_pid*
 >>>>>>> d32d32bd193cb40c6d2c36e037ccd65b702e1d3c
+=======
+### OS ###
+.DS_Store
+
+### Build artifacts ###
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+
+### Logs ###
+*.log
+>>>>>>> 9566f65274a52131510f2cc3030a0d00f61df694
